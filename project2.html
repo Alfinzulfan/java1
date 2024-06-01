@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 2px;
+            margin: 0 auto;
+            border: 2px solid #333;
+            border-radius: 5px;
+            width: 306px;
+            height: 306px;
+            background-color: #fff;
+        }
+
+        .cell {
+            border: 1px solid #333;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cell:hover {
+            background-color: #ddd;
+        }
+
+        .player-x {
+            color: #007bff;
+        }
+
+        .player-o {
+            color: #28a745;
+        }
+
+        #message {
+            margin-top: 20px;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #retry {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #retry:hover {
+            background-color: #0056b3;
+        }
+        a {
+            font-size: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" >Lihat project2</a>
+
+    <h1>Tic Tac Toe</h1>
+    <div id="board">
+        <div class="cell" onclick="placeMarker(0)"></div>
+        <div class="cell" onclick="placeMarker(1)"></div>
+        <div class="cell" onclick="placeMarker(2)"></div>
+        <div class="cell" onclick="placeMarker(3)"></div>
+        <div class="cell" onclick="placeMarker(4)"></div>
+        <div class="cell" onclick="placeMarker(5)"></div>
+        <div class="cell" onclick="placeMarker(6)"></div>
+        <div class="cell" onclick="placeMarker(7)"></div>
+        <div class="cell" onclick="placeMarker(8)"></div>
+    </div>
+    <div id="message"></div>
+    <button id="retry" onclick="resetGame()">Retry</button>
+
+
+    <script src="project2.js"></script>
+</body>
+</html>

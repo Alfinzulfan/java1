@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Perhitungan Penjualan Barang</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input[type="number"],
+      input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+
+      #result {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      a {
+        font-size: 20px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="project2.html">Lihat project2</a>
+
+    <h2>Perhitungan Penjualan Barang</h2>
+
+    <h3>Daftar Barang yang Dijual:</h3>
+    <ul>
+      <li>Susu: Rp 7</li>
+      <li>Air mineral: Rp 3</li>
+      <li>Roti: Rp 10</li>
+      <li>Permen: Rp 13</li>
+    </ul>
+
+    <form id="salesForm">
+      <label for="totalMoney">Total Uang:</label>
+      <input
+        type="number"
+        id="totalMoney"
+        name="totalMoney"
+        required
+      /><br /><br />
+
+      <div id="items">
+        <div class="item">
+          <label for="itemName">Nama Barang:</label>
+          <input
+            type="text"
+            class="itemName"
+            name="itemName"
+            required
+          /><br /><br />
+          <label for="itemPrice">Harga Barang:</label>
+          <input
+            type="number"
+            class="itemPrice"
+            name="itemPrice"
+            required
+          /><br /><br />
+        </div>
+      </div>
+
+      <button type="button" onclick="addItem()">Tambah Barang</button
+      ><br /><br />
+
+      <button type="button" onclick="calculateSales()">Hitung</button>
+    </form>
+
+    <h3>Daftar Barang:</h3>
+    <ul id="itemList"></ul>
+
+    <p id="result"></p>
+
+    <script src="main.js"></script>
+  </body>
+</html>
